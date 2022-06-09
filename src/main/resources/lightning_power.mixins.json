@@ -4,6 +4,7 @@
   "package": "dev.kir.lightningpower.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "LightningRodBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
