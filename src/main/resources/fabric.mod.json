@@ -20,6 +20,7 @@
       "dev.kir.lightningpower.LightningPower"
     ],
     "modmenu": [
+      "dev.kir.lightningpower.compat.modmenu.ModMenuCompat"
     ]
   },
   "mixins": [
