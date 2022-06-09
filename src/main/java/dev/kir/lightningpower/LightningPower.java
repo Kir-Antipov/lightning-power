@@ -1,6 +1,7 @@
 package dev.kir.lightningpower;
 
 import dev.kir.lightningpower.config.LightningPowerConfig;
+import dev.kir.lightningpower.energy.LightningPowerEnergy;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
@@ -17,5 +18,6 @@ public class LightningPower implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LightningPowerEnergy.init();
     }
 }
