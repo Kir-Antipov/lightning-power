@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "lightning_power",
+  "version": "${version}",
+  "name": "Lightning Power",
+  "description": "Turn your lightning rods into a power source.",
+  "authors": [
+    "Kir_Antipov"
+  ],
+  "contact": {
+    "website": "https://github.com/Kir-Antipov/lightning-power",
+    "sources": "https://github.com/Kir-Antipov/lightning-power",
+    "issues": "https://github.com/Kir-Antipov/lightning-power/issues/new/choose"
+  },
+  "license": "MIT",
+  "icon": "assets/lightning_power/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.kir.lightningpower.LightningPower"
+    ],
+    "modmenu": [
+    ]
+  },
+  "mixins": [
+    "lightning_power.mixins.json"
+  ],
+  "custom": {
+    "modmanager": {
+      "modrinth": "8xmgxdlY",
+      "curseforge": 631812
+    }
+  },
+  "depends": {
+    "fabric": "*",
+    "fabricloader": "${fabric}",
+    "minecraft": "${minecraft}",
+    "java": ">=16",
+    "team_reborn_energy": "${team_reborn_energy}"
+  },
+  "suggests": {
+    "cloth-config": "${cloth_config}",
+    "modmenu": "${modmenu}"
+  }
+}
