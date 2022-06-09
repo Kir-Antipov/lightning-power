@@ -1,0 +1,6 @@
+{
+  "text.autoconfig.lightning_power.title": "Lightning Power",
+  "text.autoconfig.lightning_power.option.accurateRedstonePower": "Accurate redstone power",
+  "text.autoconfig.lightning_power.option.accurateRedstonePower.@Tooltip": "Redstone signal emitted by a lightning rod will gradually decrease from 15 to 0",
+  "text.autoconfig.lightning_power.option.emittedEnergyAmountPerTick": "Emitted energy amount (per tick)"
+}
