@@ -44,8 +44,8 @@ processResources {
         "version": version,
         "fabric": ">=${loaderDependencyVersion}",
         "minecraft": ">=${minecraftDependencyVersion.replaceFirst(/^(\d+\.\d+)(\.\d+|)$/, '$1')}",
+        "team_reborn_energy": ">=${project.tr_energy_version}",
         "cloth_config": project.cloth_version,
-        "team_reborn_energy": project.tr_energy_version,
         "modmenu": ">=${project.modmenu_version}",
     ]
 
