@@ -27,7 +27,7 @@
     "lightning_power.mixins.json"
   ],
   "custom": {
-    "modmanager": {
+    "mc-publish": {
       "modrinth": "8xmgxdlY",
       "curseforge": 631812
     }
