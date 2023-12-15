@@ -35,8 +35,8 @@ You can edit any of these values directly in the config file or via [ModMenu](ht
 ## Installation
 
 Requirements:
-- Minecraft `1.19.x`
-- Fabric Loader `>=0.14.0`
+- Minecraft `1.20.x`
+- Fabric Loader `>=0.15.0`
 
 You can download the mod from:
 
