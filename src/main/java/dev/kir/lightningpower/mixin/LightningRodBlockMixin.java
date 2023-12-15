@@ -53,7 +53,7 @@ public abstract class LightningRodBlockMixin extends RodBlock {
         return state.with(POWER_LEVEL, MAX_POWER_LEVEL);
     }
 
-    @ModifyArg(method = "setPowered", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;createAndScheduleBlockTick(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;I)V", ordinal = 0), index = 2)
+    @ModifyArg(method = "setPowered", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;scheduleBlockTick(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;I)V", ordinal = 0), index = 2)
     private int createAndScheduleBlockTick(int ticks) {
         return 1;
     }
@@ -67,7 +67,7 @@ public abstract class LightningRodBlockMixin extends RodBlock {
             if (newPowerLevel == 0) {
                 newState = newState.with(POWERED, false);
             } else {
-                world.createAndScheduleBlockTick(pos, this, 1);
+                world.scheduleBlockTick(pos, this, 1);
             }
 
             world.setBlockState(pos, newState, 3);
@@ -82,7 +82,7 @@ public abstract class LightningRodBlockMixin extends RodBlock {
     private void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify, CallbackInfo ci) {
         if (!state.isOf(oldState.getBlock())) {
             if (state.get(POWERED) && !world.getBlockTickScheduler().isQueued(pos, this)) {
-                world.createAndScheduleBlockTick(pos, this, 1);
+                world.scheduleBlockTick(pos, this, 1);
             }
             ci.cancel();
         }
